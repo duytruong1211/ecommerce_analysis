@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw
+    database: ecommerce_data 
+    schema: public
+    tables:
+      - name: olist_orders
