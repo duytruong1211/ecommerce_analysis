@@ -1,6 +1,6 @@
 
 
-{{ config(materialized='view') }}
+{{ config(materialized='table') }}
 
 SELECT
     order_id,
