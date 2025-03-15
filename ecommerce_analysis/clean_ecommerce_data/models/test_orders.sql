@@ -7,5 +7,5 @@ SELECT
     customer_id,
     order_status,
     order_purchase_timestamp::date AS order_date
-FROM {{ source('raw', 'olist_orders') }}
+FROM {{ source('raw', 'olist_orders_dataset') }}
 WHERE order_status NOT IN ('canceled', 'unavailable')

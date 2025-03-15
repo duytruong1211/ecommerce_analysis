@@ -5,4 +5,4 @@ sources:
     database: ecommerce_data 
     schema: public
     tables:
-      - name: olist_orders
+      - name: olist_orders_dataset
