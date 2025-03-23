@@ -6,7 +6,7 @@ SELECT
     payment_sequential,
     payment_type,
     payment_installments,
-    payment_values::decimal payment_values
+    payment_value::decimal payment_value
 FROM 
     cte
 

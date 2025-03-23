@@ -7,3 +7,4 @@ sources:
     tables:
       - name: olist_orders_dataset
       - name: olist_order_items_dataset
+      - name: olist_order_payments_dataset
