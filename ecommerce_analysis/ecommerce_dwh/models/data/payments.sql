@@ -4,9 +4,8 @@
 ) }}
 with cte as (
 select
-    order_id::text || payment_sequential::text payment_id,
     *
 from 
- {{ ref('staging_payments') }}
+ {{ ref('stg_payments') }}
 )
 select * from cte
