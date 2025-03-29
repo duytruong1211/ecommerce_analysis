@@ -1,7 +1,8 @@
 with cte as (select * from  {{ source('raw', 'olist_order_items_dataset') }} )
 select
+    order_id || order_item_id item_id,
     order_id,
-    order_item_id,
+    order_item_id item_sequential,
     seller_id,
     product_id,
     price::decimal price,
