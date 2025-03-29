@@ -8,6 +8,6 @@ select
     product_id,
     price::decimal price,
     freight_value::decimal freight_value,
-    COALESCE(NULLIF(shipping_limit_date, ''), NULL)::timestamp shipping_limit_date_at
+    NULLIF(shipping_limit_date, '')::timestamp shipping_limit_date_at
 from
     cte
