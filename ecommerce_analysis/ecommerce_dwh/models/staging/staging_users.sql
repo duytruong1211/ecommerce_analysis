@@ -1,6 +1,6 @@
 
 with cte as ( select * from {{ source('raw', 'olist_order_customer_dataset') }} )
-
+--no null values so no need to transform
 SELECT
     customer_unique_id user_id,
     customer_id user_order_id,
