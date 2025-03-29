@@ -1,6 +1,6 @@
 with cte as (select * from  {{ source('raw', 'olist_order_items_dataset') }} )
 select
-    order_id || order_item_id item_id,
+    order_id::text || order_item_id item_id,
     order_id,
     order_item_id item_sequential,
     seller_id,
