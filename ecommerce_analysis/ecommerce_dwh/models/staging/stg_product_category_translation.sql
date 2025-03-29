@@ -1,6 +1,5 @@
 
-with cte as ( select * from {{ source('raw', ' product_category_name_translation') }} )
---no null values so no need to transform
+with cte as ( select * from {{ source('raw', 'product_category_name_translation') }} )
 SELECT
     product_category_name,
     product_category_name_english
