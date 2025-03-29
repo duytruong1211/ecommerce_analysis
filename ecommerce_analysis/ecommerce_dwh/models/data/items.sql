@@ -6,6 +6,6 @@ select
 
     *
 from 
- {{ ref('staging_items') }}
+ {{ ref('stg_items') }}
 )
 select * from cte

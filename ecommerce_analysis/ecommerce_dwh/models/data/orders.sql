@@ -6,6 +6,6 @@ with cte as (
 select
     *
 from 
- {{ ref('staging_orders') }}
+ {{ ref('stg_orders') }}
 )
 select * from cte
