@@ -9,7 +9,7 @@ SELECT
     NULLIF(won_date,'') ::timestamp lead_won_at,
     NULLIF(business_segment,'') business_segment,
     NULLIF(lead_type,'') lead_type,
-    NULLIF(lead_behavior_profile,'') lead_behavior_profile,
+    NULLIF(lead_behaviour_profile,'') lead_behaviour_profile,
     NULLIF(has_company,'') is_company,
     NULLIF(has_gtin,'') is_gtin
 FROM 
