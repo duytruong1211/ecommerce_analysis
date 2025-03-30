@@ -10,8 +10,13 @@ SELECT
     NULLIF(business_segment,'') business_segment,
     NULLIF(lead_type,'') lead_type,
     NULLIF(lead_behaviour_profile,'') lead_behaviour_profile,
-    NULLIF(has_company,'') is_company,
-    NULLIF(has_gtin,'') is_gtin
+    has_company is_company,
+    has_gtin is_gtin,
+    NULLIF(average_stock,'') average_stock,
+    NULLIF(business_type,'') business_type,
+    declared_product_catalog_size,
+    declared_monthly_revenue
+
 FROM 
     cte
 

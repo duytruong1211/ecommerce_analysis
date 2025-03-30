@@ -1,8 +1,14 @@
 {{ config(
-    materialized='table',
+    materialized='incremental',
     unique_key='order_id'
 ) }}
-with cte as (
+with users_info as (
+SELECT
+    
+FROM
+    {{ ref ('stg_users') }}
+
+)
 select
     *
 from 
