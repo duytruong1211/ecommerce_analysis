@@ -2,8 +2,8 @@ version: 1
 
 sources:
   - name: raw
-    database: ecommerce_data 
-    schema: public
+    database: railway 
+    schema: ecommerce_data
     tables:
       - name: olist_orders_dataset
       - name: olist_order_items_dataset

@@ -39,7 +39,7 @@ SELECT
 
 FROM
     {{ ref ('stg_items' )}} i
-
+GROUP BY 1
 )
 select
     order_id,

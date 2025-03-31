@@ -245,3 +245,95 @@ Runtime Error
 [0m15:23:29.901781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019472C6D350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019472B5DD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019472AABAC0>]}
 [0m15:23:29.902047 [debug] [MainThread]: Flushing usage events
 [0m15:23:31.192423 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:19:42.753625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022858492900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002285654CB90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002285940FED0>]}
+
+
+============================== 18:19:42.758039 | 936a3c5a-0d5c-4bfa-9e34-387cfc5eb781 ==============================
+[0m18:19:42.758039 [info ] [MainThread]: Running with dbt=1.9.3
+[0m18:19:42.758541 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt run', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'quiet': 'False', 'printer_width': '80', 'target_path': 'None', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\Admin\\.dbt', 'write_json': 'True', 'introspect': 'True', 'warn_error': 'None', 'use_colors': 'True', 'empty': 'False', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'no_print': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_format': 'default'}
+[0m18:19:42.758861 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\Admin\Documents\transformation\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:19:42.759489 [debug] [MainThread]: Command `dbt run` failed at 18:19:42.759378 after 0.14 seconds
+[0m18:19:42.759742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022859439350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002285932DD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002285927BAC0>]}
+[0m18:19:42.759996 [debug] [MainThread]: Flushing usage events
+[0m18:19:44.096508 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:19:51.453934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C5672900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C3750B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C660BED0>]}
+
+
+============================== 18:19:51.457203 | 5aff9d61-8134-48d5-8797-36b1f66c19af ==============================
+[0m18:19:51.457203 [info ] [MainThread]: Running with dbt=1.9.3
+[0m18:19:51.457710 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt debug', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'quiet': 'False', 'printer_width': '80', 'target_path': 'None', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\Admin\\.dbt', 'cache_selected_only': 'False', 'introspect': 'True', 'warn_error': 'None', 'empty': 'None', 'write_json': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_format': 'default'}
+[0m18:19:51.476463 [info ] [MainThread]: dbt version: 1.9.3
+[0m18:19:51.476994 [info ] [MainThread]: python version: 3.13.2
+[0m18:19:51.477447 [info ] [MainThread]: python path: C:\Users\Admin\AppData\Local\Programs\Python\Python313\python.exe
+[0m18:19:51.477771 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m18:19:51.622003 [info ] [MainThread]: Using profiles dir at C:\Users\Admin\.dbt
+[0m18:19:51.622742 [info ] [MainThread]: Using profiles.yml file at C:\Users\Admin\.dbt\profiles.yml
+[0m18:19:51.623120 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Admin\Documents\transformation\dbt_project.yml
+[0m18:19:51.624039 [info ] [MainThread]: adapter type: postgres
+[0m18:19:51.624362 [info ] [MainThread]: adapter version: 1.9.0
+[0m18:19:51.624777 [info ] [MainThread]: Configuration:
+[0m18:19:51.625164 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:19:51.625376 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m18:19:51.625584 [info ] [MainThread]: Required dependencies:
+[0m18:19:51.625799 [debug] [MainThread]: Executing "git --help"
+[0m18:19:51.641694 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:19:51.642054 [debug] [MainThread]: STDERR: "b''"
+[0m18:19:51.642288 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:19:51.642575 [info ] [MainThread]: Connection:
+[0m18:19:51.642816 [info ] [MainThread]:   host: caboose.proxy.rlwy.net
+[0m18:19:51.643028 [info ] [MainThread]:   port: 19517
+[0m18:19:51.643242 [info ] [MainThread]:   user: postgres
+[0m18:19:51.643435 [info ] [MainThread]:   database: railway
+[0m18:19:51.643647 [info ] [MainThread]:   schema: staging
+[0m18:19:51.643845 [info ] [MainThread]:   connect_timeout: 10
+[0m18:19:51.644040 [info ] [MainThread]:   role: None
+[0m18:19:51.644241 [info ] [MainThread]:   search_path: None
+[0m18:19:51.644429 [info ] [MainThread]:   keepalives_idle: 0
+[0m18:19:51.644622 [info ] [MainThread]:   sslmode: None
+[0m18:19:51.644809 [info ] [MainThread]:   sslcert: None
+[0m18:19:51.644997 [info ] [MainThread]:   sslkey: None
+[0m18:19:51.645336 [info ] [MainThread]:   sslrootcert: None
+[0m18:19:51.645761 [info ] [MainThread]:   application_name: dbt
+[0m18:19:51.646192 [info ] [MainThread]:   retries: 1
+[0m18:19:51.646786 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m18:19:51.841355 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m18:19:53.615389 [debug] [MainThread]: Using postgres connection "debug"
+[0m18:19:53.615762 [debug] [MainThread]: On debug: select 1 as id
+[0m18:19:53.615983 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:19:56.444308 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "caboose.proxy.rlwy.net" (34.1.194.15), port 19517 failed: FATAL:  password authentication failed for user "postgres"
+connection to server at "caboose.proxy.rlwy.net" (34.1.194.15), port 19517 failed: FATAL:  password authentication failed for user "postgres"
+
+[0m18:19:59.009696 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m18:19:59.011150 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m18:19:59.012238 [debug] [MainThread]: On debug: No close available on handle
+[0m18:19:59.013236 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m18:19:59.014686 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m18:19:59.016290 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Admin\Documents\transformation\dbt_project.yml> not found
+
+[0m18:19:59.017432 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "caboose.proxy.rlwy.net" (34.1.194.15), port 19517 failed: FATAL:  password authentication failed for user "postgres"
+  connection to server at "caboose.proxy.rlwy.net" (34.1.194.15), port 19517 failed: FATAL:  password authentication failed for user "postgres"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m18:19:59.019382 [debug] [MainThread]: Command `dbt debug` failed at 18:19:59.019007 after 7.68 seconds
+[0m18:19:59.019935 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m18:19:59.020361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C67E7950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C6835910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C669BF00>]}
+[0m18:19:59.020816 [debug] [MainThread]: Flushing usage events
+[0m18:19:59.977862 [debug] [MainThread]: An error was encountered while trying to flush usage events
