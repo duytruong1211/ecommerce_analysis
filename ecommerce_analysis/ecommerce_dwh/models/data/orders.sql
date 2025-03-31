@@ -2,21 +2,20 @@
     materialized='table',
     unique_key='order_id'
 ) }}
-select * from {{ ref('stg_orders' ) }}
 with orders as (select * from {{ ref('stg_orders') }} )
-,users_info as (
+,order_users as (
 select
     o.order_id,
     u.user_id,
     ROW_NUMBER() OVER (
-        PARTITION BY customer_unique_id 
-        ORDER BY order_purchase_timestamp ASC
+        PARTITION BY user_id,order_id
+        ORDER BY order_created_at ASC
     ) as order_sequentials
 from 
     orders o
-    inner join  {{ ref ('stg_users') }} u on o.user_order_id = o.user_order_id
+    inner join  {{ ref ('stg_users') }} u on o.user_order_id = u.user_order_id
 )
-, orders_payment as (
+, order_payments as (
 SELECT
     p.order_id,
     count(p.payment_id) payment_numbers,
@@ -31,7 +30,7 @@ GROUP BY 1
 )
 , order_items as (
 SELECT
-    order_id,
+    o.order_id,
     count(item_sequential) item_numbers,
     sum(price) order_volume,
     sum(freight_value) freight_value,
@@ -47,7 +46,7 @@ select
     order_sequentials,
     case when order_sequentials = 1 then 'new' else 'repeat' end as new_vs_repeat,
     item_numbers,
-    order_volumem,
+    order_volume,
     freight_value,
     total_order_volume
 
