@@ -1,5 +1,5 @@
 
-with cte as ( select * from {{ source('raw', 'olist_products_dataset') }} )
+with cte as ( select * from {{ source('raw', 'olist_products') }} )
 --no null values so no need to transform
 SELECT
     product_id,

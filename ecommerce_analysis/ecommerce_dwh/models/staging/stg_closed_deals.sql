@@ -1,5 +1,5 @@
 
-with cte as ( select * from {{ source('raw', 'olist_closed_deals_dataset') }} )
+with cte as ( select * from {{ source('raw', 'olist_closed_deals') }} )
 --no null values so no need to transform
 SELECT
     mql_id,

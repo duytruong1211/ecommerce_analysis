@@ -1,4 +1,4 @@
-with cte as (select * from  {{ source('raw', 'olist_order_items_dataset') }} )
+with cte as (select * from  {{ source('raw', 'olist_order_items') }} )
 select
     -- create unique item key
     order_id::text || order_item_id item_id,

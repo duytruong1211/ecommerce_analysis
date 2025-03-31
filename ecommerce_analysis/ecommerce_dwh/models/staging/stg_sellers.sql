@@ -1,5 +1,5 @@
 
-with cte as ( select * from {{ source('raw', 'olist_sellers_dataset') }} )
+with cte as ( select * from {{ source('raw', 'olist_sellers') }} )
 --no null values 
 SELECT
     seller_id,
