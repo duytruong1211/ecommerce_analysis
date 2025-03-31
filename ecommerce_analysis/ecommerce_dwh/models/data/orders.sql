@@ -8,7 +8,7 @@ select
     o.order_id,
     u.user_id,
     ROW_NUMBER() OVER (
-        PARTITION BY user_id,order_id
+        PARTITION BY u.user_id
         ORDER BY order_created_at ASC
     ) as order_sequentials
 from 
@@ -55,5 +55,5 @@ select
 from
     orders o
     left join order_users ui on o.order_id = ui.order_id
-    left join order_payments op on ui.order_id = o.order_id
-    left join order_items oi on oi.order_id = o.order_id
+    left join order_payments op on o.order_id = op.order_id
+    left join order_items oi on o.order_id = oi.order_id
