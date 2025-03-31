@@ -15,4 +15,4 @@ sources:
       - name: olist_closed_deals
       - name: olist_marketing_qualified_leads_dataset
       - name: olist_geolocation
-      - name: olist_order_reviews_dataset
+      - name: olist_order_reviews
