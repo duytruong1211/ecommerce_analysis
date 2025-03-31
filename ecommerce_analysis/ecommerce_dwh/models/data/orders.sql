@@ -30,7 +30,7 @@ GROUP BY 1
 )
 , order_items as (
 SELECT
-    o.order_id,
+    i.order_id,
     count(item_sequential) item_numbers,
     sum(price) order_volume,
     sum(freight_value) freight_value,
@@ -41,17 +41,19 @@ FROM
 GROUP BY 1
 )
 select
-    order_id,
-    user_id,
+    o.order_id,
+    ui.user_id,
     order_sequentials,
     case when order_sequentials = 1 then 'new' else 'repeat' end as new_vs_repeat,
     item_numbers,
     order_volume,
     freight_value,
-    total_order_volume
+    total_order_volume,
+    o.order_created_at,
+    o.order_delivered_user_at
 
 from
     orders o
     left join order_users ui on o.order_id = ui.order_id
-    left join order_payments op on ui.order_id = op.order_id
+    left join order_payments op on ui.order_id = o.order_id
     left join order_items oi on oi.order_id = o.order_id
