@@ -2,17 +2,17 @@ version: 1
 
 sources:
   - name: raw
-    database: ecommerce_data 
-    schema: public
+    database: railway 
+    schema: ecommerce_data
     tables:
-      - name: olist_orders_dataset
-      - name: olist_order_items_dataset
-      - name: olist_order_payments_dataset
-      - name: olist_order_customer_dataset
-      - name: olist_sellers_dataset
-      - name: olist_products_dataset
+      - name: olist_orders
+      - name: olist_order_items
+      - name: olist_order_payments
+      - name: olist_customers
+      - name: olist_sellers
+      - name: olist_products
       - name: product_category_name_translation
-      - name: olist_closed_deals_dataset
+      - name: olist_closed_deals
       - name: olist_marketing_qualified_leads_dataset
-      - name: olist_geolocation_dataset
-      - name: olist_order_reviews_dataset
+      - name: olist_geolocation
+      - name: olist_order_reviews

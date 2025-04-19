@@ -1,5 +1,5 @@
 
-with cte as ( select * from {{ source('raw', 'olist_order_reviews_dataset') }} )
+with cte as ( select * from {{ source('raw', 'olist_order_reviews') }} )
 SELECT
     review_id,
     order_id,

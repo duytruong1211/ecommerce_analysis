@@ -1,5 +1,5 @@
 
-with cte as ( select * from {{ source('raw', 'olist_order_payments_dataset') }} )
+with cte as ( select * from {{ source('raw', 'olist_order_payments') }} )
 
 SELECT
     --- create unique payment key
