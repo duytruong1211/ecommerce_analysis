@@ -36,7 +36,8 @@ SELECT
     count(item_sequential) item_numbers,
     sum(price) order_volume,
     sum(freight_value) freight_value,
-    sum(price + freight_value) total_order_volume
+    sum(price + freight_value) total_order_volume,
+    min(shipping_limit_date_at) order_shipping_limit_date_at
 
 FROM
     {{ ref ('stg_items' )}} i
@@ -66,6 +67,7 @@ select
     o.order_delivered_carrier_at,
     o.order_delivered_user_at,
     order_estimated_delivery_at,
+    order_shipping_limit_date_at,
     ui.user_city,
     ui.user_state,
     case when r.order_id is not null then 1 else  0 end as is_review,

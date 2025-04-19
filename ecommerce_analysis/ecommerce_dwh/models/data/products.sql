@@ -11,7 +11,7 @@ from
 )
 select
     product_id,
-    product_category_name_english product_category,
+    case when product_category_name_english is null then 'not_categorized' else product_category_name_english end product_category,
     photos_number,
     weight_in_grams weight_in_g,
     COALESCE(length_in_cm,0) * COALESCE(height_in_cm,0) *COALESCE(width_in_cm,0)  product_size_cm3
