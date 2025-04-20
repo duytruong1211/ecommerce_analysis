@@ -1,62 +1,72 @@
 sub_product_category,product_category
+industry_commerce_and_business,Business & Industrial
 diapers_and_hygiene,Health & Baby
+home_appliances,Home Appliances
 fashion_shoes,Fashion
 fashion_sport,Fashion
-fashio_female_clothing,Fashion
-fashion_underwear_beach,Fashion
-fashion_bags_accessories,Fashion
-fashion_male_clothing,Fashion
-fashion_childrens_clothes,Fashion
-health_beauty,Health & Beauty
-computers,Electronics
-computers_accessories,Electronics
-electronics,Electronics
-telephony,Electronics
-cine_photo,Electronics
-consoles_games,Electronics
-books_general_interest,Books
-books_technical,Books
-books_imported,Books
-bed_bath_table,Home
-furniture_decor,Home
-furniture_living_room,Home
-furniture_bedroom,Home
-furniture_mattress_and_upholstery,Home
-housewares,Home
-home_construction,Home Improvement
-construction_tools_construction,Home Improvement
-construction_tools_safety,Home Improvement
-costruction_tools_tools,Home Improvement
-construction_tools_lights,Home Improvement
-garden_tools,Home Improvement
-air_conditioning,Home Appliances
-home_appliances,Home Appliances
 small_appliances,Home Appliances
-small_appliances_home_oven_and_coffee,Home Appliances
 toys,Toys & Games
-baby,Health & Baby
-pet_shop,Pets
-auto,Automotive
-cool_stuff,Other
-not_categorized,Other
-market_place,Other
-musical_instruments,Entertainment
+health_beauty,Health & Beauty
+fashion_underwear_beach,Fashion
 dvds_blu_ray,Entertainment
-cds_dvds_musicals,Entertainment
-music,Entertainment
-art,Arts & Crafts
-arts_and_craftmanship,Arts & Crafts
-la_cuisine,Food & Kitchen
-food,Food & Kitchen
-food_drink,Food & Kitchen
 drinks,Food & Kitchen
-flowers,Gift & Seasonal
-watches_gifts,Gift & Seasonal
-christmas_supplies,Gift & Seasonal
-stationery,Office
-office_furniture,Office
+agro_industry_and_commerce,Business & Industrial
+construction_tools_construction,Home Improvement
+arts_and_craftmanship,Arts & Crafts
+books_general_interest,Books
 fixed_telephony,Electronics
-party_supplies,Events
 security_and_services,Security
-signaling_and_security,Security
+costruction_tools_garden,Home Improvement
+consoles_games,Electronics
+computers_accessories,Electronics
+bed_bath_table,Home
+party_supplies,Events
+tablets_printing_image,Electronics
+la_cuisine,Food & Kitchen
+cds_dvds_musicals,Entertainment
+fashion_bags_accessories,Fashion
+garden_tools,Home Improvement
+construction_tools_safety,Home Improvement
+luggage_accessories,Fashion
+construction_tools_lights,Home Improvement
+furniture_mattress_and_upholstery,Home
+kitchen_dining_laundry_garden_furniture,Home
+housewares,Home
+small_appliances_home_oven_and_coffee,Home Appliances
+art,Arts & Crafts
+fashio_female_clothing,Fashion
+home_appliances_2,Home Appliances
+baby,Health & Baby
+food,Food & Kitchen
+fashion_childrens_clothes,Fashion
+books_technical,Books
+home_confort,Home
+market_place,Other
+stationery,Office
+furniture_living_room,Home
+costruction_tools_tools,Home Improvement
 audio,Electronics
+watches_gifts,Gift & Seasonal
+furniture_bedroom,Home
+cool_stuff,Other
+computers,Electronics
+fashion_male_clothing,Fashion
+perfumery,Health & Beauty
+signaling_and_security,Security
+books_imported,Books
+pet_shop,Pets
+air_conditioning,Home Appliances
+office_furniture,Office
+home_comfort_2,Home
+food_drink,Food & Kitchen
+furniture_decor,Home
+electronics,Electronics
+musical_instruments,Entertainment
+cine_photo,Electronics
+sports_leisure,Fashion
+telephony,Electronics
+flowers,Gift & Seasonal
+home_construction,Home Improvement
+auto,Automotive
+music,Entertainment
+christmas_supplies,Gift & Seasonal

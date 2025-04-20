@@ -3,7 +3,7 @@ with cte as ( select * from {{ source('raw', 'olist_products') }} )
 --no null values so no need to transform
 SELECT
     product_id,
-    nullif(product_category_name,'') product_category,
+    nullif(product_category_name,'') product_category_name,
     product_name_lenght name_length,
     product_description_lenght description_length,
     product_photos_qty photos_number,
@@ -13,4 +13,5 @@ SELECT
     product_width_cm width_in_cm
 FROM 
     cte
+
 
