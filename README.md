@@ -1,6 +1,7 @@
 # 🛒 E-commerce Delivery Experience Analysis
 
-This project analyzes customer delivery experiences across various product categories, focusing on fulfillment times, shipping durations, and customer satisfaction metrics.
+This project analyzes customer delivery experiences across various product categories, focusing on fulfillment times, shipping durations, and customer satisfaction metrics. The purpose is to explore the Brazilian e-commerce logistics landscape, uncover operational bottlenecks, and surface insights into how shipping performance impacts customer experience.
+
 
 ## 📊 Dashboard Access
 
