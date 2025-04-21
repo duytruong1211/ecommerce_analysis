@@ -18,7 +18,7 @@ Explore the interactive dashboard here: [View Dashboard](https://server-producti
 ## 🗂️ Project Structure
 
 - `models/`: Contains dbt models for data transformation.
-- `dashboards/`: Configuration files for the dashboard.
+- `dashboards/`: Queries used in the Redash dashboard.
 
 ### ☁️ Hosting & Infrastructure
 
