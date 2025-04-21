@@ -32,7 +32,7 @@ Railway provides a cost-effective, cloud-hosted environment that’s easy to sca
 
 ## 📂 Source Data
 
-This project uses the [Olist Brazilian E-Commerce dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) from Kaggle.
+Based on [Olist Brazilian E-Commerce dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) from Kaggle.
 
 It contains ~100,000 orders placed between 2016 and 2018 across multiple cities in Brazil, covering order timelines, product details, payments, reviews, and seller-customer relationships. The dataset enables end-to-end analysis of the customer purchase and delivery experience.
 
