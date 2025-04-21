@@ -1,0 +1,120 @@
+version: 2
+
+models:
+  - name: orders
+    description: "Fact table capturing the full customer order lifecycle, including fulfillment, shipping, and review metrics."
+    columns:
+      - name: order_id
+        description: "Primary key for each order."
+        tests: [unique, not_null]
+      - name: user_id
+        description: "Customer ID associated with the order."
+        tests: [not_null]
+      - name: order_sequentials
+        description: "The sequence number of this order for the customer."
+      - name: new_vs_repeat
+        description: "Categorizes the customer as 'new' or 'repeat' based on their order history."
+      - name: item_numbers
+        description: "Total number of items in the order."
+      - name: order_status
+        description: "Final status of the order (e.g. delivered, shipped)."
+      - name: order_volume
+        description: "Sum of product values in the order."
+      - name: freight_value
+        description: "Total shipping cost."
+      - name: total_order_volume
+        description: "Combined value of products and freight."
+      - name: order_created_at
+        description: "Timestamp when the order was placed."
+      - name: order_approved_at
+        description: "Timestamp when the order was approved for fulfillment."
+      - name: order_delivered_carrier_at
+        description: "Timestamp when the order was handed to the carrier."
+      - name: order_delivered_user_at
+        description: "Timestamp when the customer received the order."
+      - name: order_estimated_delivery_at
+        description: "System-estimated delivery date."
+      - name: order_shipping_limit_date_at
+        description: "Deadline for the seller to dispatch the order."
+      - name: user_city
+        description: "Customer city."
+      - name: user_state
+        description: "Customer state."
+      - name: is_review
+        description: "Binary flag indicating whether the order has a review."
+      - name: avg_review_score
+        description: "Average score from reviews linked to this order."
+
+  - name: products
+    description: "Product-level model enriched with standardized categories and volume calculation."
+    columns:
+      - name: product_id
+        description: "Primary key for each product."
+        tests: [unique, not_null]
+      - name: product_category
+        description: "Mapped high-level product category."
+      - name: sub_product_category_name_english
+        description: "Original English product category name from translation mapping."
+      - name: photos_number
+        description: "Number of product photos listed."
+      - name: weight_in_g
+        description: "Weight of the product in grams."
+      - name: product_size_cm3
+        description: "Calculated volume in cubic centimeters (L x W x H)."
+
+  - name: payments
+    description: "Fact table with payment-level granularity, including method, installment count, and value."
+    columns:
+      - name: payment_id
+        description: "Surrogate key generated from order_id and payment_sequential."
+        tests: [unique, not_null]
+      - name: order_id
+        description: "Foreign key to the orders table."
+        tests: [not_null]
+      - name: payment_sequential
+        description: "Sequential number of the payment for the order."
+      - name: payment_type
+        description: "Type of payment (credit card, boleto, voucher, etc.)."
+      - name: payment_installments
+        description: "Number of payment installments."
+      - name: payment_value
+        description: "Amount paid in this transaction."
+
+  - name: sellers
+    description: "Dimension table of sellers with standardized location data."
+    columns:
+      - name: seller_id
+        description: "Unique ID for the seller."
+        tests: [unique, not_null]
+      - name: first_five_zip_seller
+        description: "Truncated ZIP code (prefix) for geographic grouping."
+      - name: seller_city
+        description: "Seller's city of operation."
+      - name: seller_state
+        description: "Seller's state of operation."
+
+  - name: items
+    description: "Fact table representing individual items in each order, including pricing, logistics, and product links."
+    columns:
+      - name: item_id
+        description: "Surrogate key combining order_id and item_sequential."
+        tests: [unique, not_null]
+      - name: order_id
+        description: "Foreign key to the orders table."
+        tests: [not_null]
+      - name: item_sequential
+        description: "Item's sequential position in the order."
+      - name: seller_id
+        description: "Foreign key to the sellers table."
+      - name: product_id
+        description: "Foreign key to the products table."
+      - name: price
+        description: "Price of the item."
+      - name: freight_value
+        description: "Shipping cost associated with this item."
+      - name: item_shipping_limit_date_at
+        description: "Item-level SLA for dispatch."
+      - name: order_approved_at
+        description: "Approval date for the order, used for SLA measurement."
+      - name: product_category
+        description: "Final mapped product category."
