@@ -1,5 +1,5 @@
 
-## 📊 dashboard/ — Redash Queries
+## 📊 Redash Queries
 
 This folder contains SQL queries used to build the interactive dashboard on Redash. Each file corresponds to a chart or table used in the visual exploration of delivery experience metrics.
 
