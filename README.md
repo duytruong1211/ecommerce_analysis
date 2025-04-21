@@ -20,7 +20,7 @@ Explore the interactive dashboard here: [View Dashboard](https://server-producti
 - `models/`: Contains dbt models for data transformation.
 - `dashboards/`: Queries used in the Redash dashboard.
 
-### ☁️ Hosting & Infrastructure
+## ☁️ Hosting & Infrastructure
 
 This project uses **[Railway](https://railway.app/)** to host the PostgreSQL database used for both dbt transformations and Redash queries.
 
