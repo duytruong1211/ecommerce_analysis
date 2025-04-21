@@ -19,7 +19,6 @@ Explore the interactive dashboard here: [View Dashboard](https://server-producti
 
 - `models/`: Contains dbt models for data transformation.
 - `dashboards/`: Configuration files for the dashboard.
-- `data/`: Sample datasets used in the analysis.
 
 
 ## 📂 Source Data
