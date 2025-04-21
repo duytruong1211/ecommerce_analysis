@@ -20,6 +20,15 @@ Explore the interactive dashboard here: [View Dashboard](https://server-producti
 - `models/`: Contains dbt models for data transformation.
 - `dashboards/`: Configuration files for the dashboard.
 
+### ☁️ Hosting & Infrastructure
+
+This project uses **[Railway](https://railway.app/)** to host the PostgreSQL database used for both dbt transformations and Redash queries.
+
+- **PostgreSQL on Railway**: Stores raw CSV uploads, staging models, and final analytics tables
+- **Redash**: Connects directly to Railway PostgreSQL for visualization and exploration
+- **dbt**: Runs locally to transform data on the hosted database
+
+Railway provides a cost-effective, cloud-hosted environment that’s easy to scale and ideal for personal analytics projects.
 
 ## 📂 Source Data
 
