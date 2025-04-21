@@ -9,6 +9,8 @@ Explore the interactive dashboard here: [View Dashboard](https://server-producti
 
 
 ![Dashboard Screenshot](ecommerce_analysis/dashboard/ecommerce_dashboard_screenshot_1.png)
+![Dashboard Screenshot](ecommerce_analysis/dashboard/ecommerce_dashboard_screenshot_2.png)
+
 
 
 ## 🔍 Key Metrics
