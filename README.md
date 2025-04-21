@@ -7,6 +7,10 @@ This project analyzes customer delivery experiences across various product categ
 
 Explore the interactive dashboard here: [View Dashboard](https://server-production-e214.up.railway.app/public/dashboards/aLqRQMYMN1E7eO9FjE9BgtZDq0tebK49YouUY50F?org_slug=default)
 
+
+![Dashboard Screenshot](dashboard/ecommerce_dashboard_screenshot_1.png)
+
+
 ## 🔍 Key Metrics
 
 - **Average Fulfillment Time:** Time from order approval to dispatch.
