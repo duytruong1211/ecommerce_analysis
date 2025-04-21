@@ -11,7 +11,7 @@ Explore the interactive dashboard here: [View Dashboard](https://server-producti
 - **Average Fulfillment Time:** Time from order approval to dispatch.
 - **Average Shipping Time:** Duration from dispatch to customer delivery.
 - **Customer Review Score:** Average rating provided by customers.
-- **Order Status Distribution:** Breakdown of order statuses.
+- **Delayed Delivery Rate:** Breakdown of late delivery rate.
 - **Review Distribution:** Analysis of customer feedback.
 
 ## 🗂️ Project Structure
@@ -21,6 +21,11 @@ Explore the interactive dashboard here: [View Dashboard](https://server-producti
 - `data/`: Sample datasets used in the analysis.
 
 
+## 📂 Source Data
+
+This project uses the [Olist Brazilian E-Commerce dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) from Kaggle.
+
+It contains ~100,000 orders placed between 2016 and 2018 across multiple cities in Brazil, covering order timelines, product details, payments, reviews, and seller-customer relationships. The dataset enables end-to-end analysis of the customer purchase and delivery experience.
 
 ## 📬 Contact
 
