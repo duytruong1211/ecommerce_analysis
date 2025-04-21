@@ -36,6 +36,15 @@ This project uses **[Railway](https://railway.app/)** to host the PostgreSQL dat
 
 Railway provides a cost-effective, cloud-hosted environment that’s easy to scale and ideal for personal analytics projects.
 
+
+## 🧰 Technologies Used
+
+- [dbt](https://www.getdbt.com/) for data transformation.
+- [Redash](https://redash.io/) for data visualization.
+- [Railway](https://railway.app/) for hosting the PostgreSQL database.
+- [Dagster](https://dagster.io/) for orchestrating data pipelines (work in progress).
+
+
 ## 📂 Source Data
 
 Based on [Olist Brazilian E-Commerce dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) from Kaggle.
