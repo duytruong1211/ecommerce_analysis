@@ -34,6 +34,16 @@ The warehouse is organized into **two main layers** using dbt:
   - Referential integrity across staging and final models
 
 ---
+### ⚙️ Orchestration (Work in Progress)
+
+WIP integrating **Dagster** to orchestrate external data ingestion pipelines, starting with:
+
+- **💱 Currency exchange rate API** (BRL → USD/VND)  
+  Enables consistent currency normalization across orders and payments.  
+  Fetched and updated weekly, stored alongside internal tables.
+
+This real-time enrichment pipeline is designed to run independently of the core dbt transformations, following ELT best practices.
+
 
 ### 🔗 Output Usage
 
