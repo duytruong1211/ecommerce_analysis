@@ -1,0 +1,35 @@
+
+name: 'ecommerce_dwh'
+version: '1.0.0'
+
+profile: ecommerce_dwh  # 
+models:
+  ecommerce_dwh:
+    staging:
+      +materialized: view
+      +schema: staging  # 
+    data:
+      +schema: analysis  # 
+
+
+
+
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in this project can be
+# found in the "models/" directory.
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+seeds:
+  ecommerce_dwh:
+    category_mapping:
+      +schema: staging
+      +quote_columns: false

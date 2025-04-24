@@ -1,0 +1,90 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Staging model for raw order data, cleans date formats and handles nulls."
+    columns:
+      - name: order_id
+        tests: [not_null]
+      - name: user_order_id
+      - name: order_status
+      - name: order_created_at
+      - name: order_approved_at
+      - name: order_delivered_carrier_at
+      - name: order_delivered_user_at
+      - name: order_estimated_delivery_at
+
+  - name: stg_users
+    description: "Staging model for user-level data, standardizing naming and ZIP truncation."
+    columns:
+      - name: user_order_id
+        tests: [not_null]
+      - name: user_id
+        tests: [not_null]
+      - name: first_five_zip_user
+      - name: user_city
+      - name: user_state
+
+  - name: stg_items
+    description: "Staging model for order items, type casting prices and handling missing values."
+    columns:
+      - name: order_id
+        tests: [not_null]
+      - name: item_sequential
+      - name: seller_id
+      - name: product_id
+      - name: price
+      - name: freight_value
+      - name: shipping_limit_date
+      - name: order_approved_at
+
+  - name: stg_payments
+    description: "Staging model for payments, fixing type and handling undefined categories."
+    columns:
+      - name: order_id
+        tests: [not_null]
+      - name: payment_sequential
+      - name: payment_type
+      - name: payment_installments
+      - name: payment_value
+
+  - name: stg_reviews
+    description: "Staging model for customer reviews, handles missing comments and timestamp formatting."
+    columns:
+      - name: review_id
+        tests: [not_null]
+      - name: order_id
+      - name: review_score
+      - name: review_comment_title
+      - name: review_comment_message
+      - name: review_created_at
+      - name: review_answered_at
+
+  - name: stg_products
+    description: "Staging model for products, includes dimensions for size and category mapping."
+    columns:
+      - name: product_id
+        tests: [not_null]
+      - name: product_category
+      - name: photos_number
+      - name: weight_in_grams
+      - name: length_in_cm
+      - name: height_in_cm
+      - name: width_in_cm
+
+  - name: stg_sellers
+    description: "Staging model for seller data with ZIP prefix extraction and location standardization."
+    columns:
+      - name: seller_id
+        tests: [not_null]
+      - name: seller_zip_prefix
+      - name: seller_city
+      - name: seller_state
+
+  - name: stg_product_category_translation
+    description: "Mapping table for translating Portuguese product categories to English."
+    columns:
+      - name: product_category_name
+        tests: [not_null]
+      - name: product_category_name_english
+        tests: [not_null]
