@@ -1,0 +1,25 @@
+# dbt profiles and local credentials
+*.dbt
+.dbt/
+~/.dbt/
+profiles.yml
+
+# Dagster local files
+dagster_home/
+dagster.yaml
+workspace.yaml
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.env/
+.envrc
+
+# Secrets and config
+*.env
+.env.local
+*.bak
+
