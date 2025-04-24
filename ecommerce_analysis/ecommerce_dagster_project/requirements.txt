@@ -1,0 +1,5 @@
+dagster
+dagster-dbt
+dbt-core
+dbt-postgres
+python-dotenv
