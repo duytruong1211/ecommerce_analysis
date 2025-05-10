@@ -10,6 +10,9 @@ models:
       +schema: staging  # 
     data:
       +schema: analysis  # 
+    feature_store:
+      +schema: feature_store
+    
 
 
 
@@ -33,3 +36,13 @@ seeds:
     category_mapping:
       +schema: staging
       +quote_columns: false
+    dates:
+      +schema: staging
+      +column_types:
+        date_day: date
+        year: integer
+        month: integer
+        day: integer
+        weekday_name: text
+        year_month: text
+        is_weekend: boolean
